@@ -1,7 +1,7 @@
-apple apple scab
-apple black rot
-apple cedar apple rust
-apple healthy
+
+
+Not Recognized
+
 potato early blight
 potato late blight
 potato healthy

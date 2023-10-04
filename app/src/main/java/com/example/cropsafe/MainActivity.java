@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 		String[] labels = loadLabels("labels.txt");
 
 		selectBtn = findViewById(R.id.selectBtn);
-		captureBtn = findViewById(R.id.captureBtn);
+		//captureBtn = findViewById(R.id.captureBtn);
 		predictBtn = findViewById(R.id.predictBtn);
 		result = findViewById(R.id.resView);
 		imageView = findViewById(R.id.imageView);
@@ -64,13 +64,13 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 
-		captureBtn.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-				startActivityForResult(intent, 12);
-			}
-		});
+//		captureBtn.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+//				startActivityForResult(intent, 12);
+//			}
+//		});
 
 		// Set up the predictBtn click listener for Potatoandtomatomodel
 		predictBtn.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 					int maxIndex = getMax(outputFeature0.getFloatArray());
 
 					// Display result
-					String resultText = "Prediction: " + labels[maxIndex];
+					String resultText =  labels[maxIndex];
 					result.setText(resultText);
 
 					// Close the model
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
 	private String[] loadLabels(String filename) {
 		try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(getAssets().open(filename)))) {
 			String line;
-			int numLabels = 38;
+			int numLabels = 7;
 			String[] labels = new String[numLabels];
 			int cnt = 0;
 			while ((line = bufferedReader.readLine()) != null) {
