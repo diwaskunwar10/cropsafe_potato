@@ -1,4 +1,4 @@
-Not Found
-potato early blight
-potato late blight
-potato healthy
+Potato___Early_blight
+Potato___Late_blight
+Potato___healthy
+a

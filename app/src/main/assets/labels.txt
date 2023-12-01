@@ -1,7 +1,7 @@
-
-
-Not Recognized
-
+a
+b
+c
+d
 potato early blight
 potato late blight
 potato healthy
